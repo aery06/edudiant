@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>edudiant</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="css.html">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">edudiant</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="default.html">Home</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="connection.html">Connections</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="Search..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>        
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
+        <li><a href="#">Menu</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <script type="text/javascript">
+   (function(d, m){var s, h;       
+   s = document.createElement("script");
+   s.type = "text/javascript";
+   s.async=true;
+   s.src="https://apps.applozic.com/sidebox.app";
+   h=document.getElementsByTagName('head')[0];
+   h.appendChild(s);
+   window.applozic=m;
+   m.init=function(t){m._globals=t;}})(document, window.applozic || {});
+</script>
+
+<script type="text/javascript">
+  window.applozic.init({
+    appId: applozicApplicationKey,      //Get your application key from https://www.applozic.com
+    userId: userId,                     //Logged in user's id, a unique identifier for user
+    userName: username,                 //User's display name
+    imageLink : '',                     //User's profile picture url
+    email : '',                         //optional
+    contactNumber: '',                  //optional, pass with internationl code eg: +13109097458
+    desktopNotification: true,
+    source: '1',                          // optional, WEB(1),DESKTOP_BROWSER(5), MOBILE_BROWSER(6)
+    notificationIconLink: 'https://www.applozic.com/favicon.ico',    //Icon to show in desktop notification, replace with your icon
+    authenticationTypeId: 1,          //1 for password verification from Applozic server and 0 for access Token verification from your server
+    accessToken: '',                    //optional, leave it blank for testing purpose, read this if you want to add additional security by verifying password from your server https://www.applozic.com/docs/configuration.html#access-token-url
+    locShare: true,
+    googleApiKey: "AIzaSyDKfWHzu9X7Z2hByeW4RRFJrD9SizOzZt4",   // your project google api key 
+    googleMapScriptLoaded : false,   // true if your app already loaded google maps script
+    autoTypeSearchEnabled : true,     // set to false if you don't want to allow sending message to user who is not in the contact list
+    loadOwnContacts : false, //set to true if you want to populate your own contact list (see Step 4 for reference)
+    olStatus: false,         //set to true for displaying a green dot in chat screen for users who are online
+    onInit : function(response) {
+       if (response === "success") {
+          // login successful, perform your actions if any, for example: load contacts, getting unread message count, etc
+       } else {
+          // error in user login/register (you can hide chat button or refresh page)
+       }
+   },
+   contactDisplayName: function(otherUserId) {
+         //return the display name of the user from your application code based on userId.
+         return "";
+   },
+   contactDisplayImage: function(otherUserId) {
+         //return the display image url of the user from your application code based on userId.
+         return "";
+   },
+   onTabClicked: function(response) {
+         // write your logic to execute task on tab load
+         //   object response =  {
+         //    tabId : userId or groupId,
+         //    isGroup : 'tab is group or not'
+         //  }
+   }
+  });
+</script>
+
+
+
+</body>
+</html>
